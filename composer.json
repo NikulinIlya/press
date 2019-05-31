@@ -1,0 +1,15 @@
+{
+    "name": "NikulinIlya/press",
+    "description": "A markdown-powered blog for the Laravel framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NikulinIlya",
+            "email": "ilia.nikulin@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    }
+}
