@@ -8,7 +8,9 @@
             "email": "ilia.nikulin@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
     "require-dev": {
         "orchestra/testbench": "^3.8"
     },
@@ -19,7 +21,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "NikulinIlya\\press\\Tests": "tests/"
+            "NikulinIlya\\press\\Tests\\": "tests/"
         }
     }
 }
