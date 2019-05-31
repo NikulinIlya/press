@@ -11,5 +11,15 @@
     "require": {},
     "require-dev": {
         "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "NikulinIlya\\press\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NikulinIlya\\press\\Tests": "tests/"
+        }
     }
 }
