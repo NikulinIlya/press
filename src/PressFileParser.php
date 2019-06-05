@@ -29,7 +29,7 @@ class PressFileParser
     protected function splitFile()
     {
         preg_match('/^\-{3}(.*?)\-{3}(.*)/s',
-            File::get($this->filename),
+            File::exists($this->filename) ? File::get($this->filename) : $this->filename,
             $this->data
         );
     }
