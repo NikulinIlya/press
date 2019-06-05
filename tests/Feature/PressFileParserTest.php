@@ -4,6 +4,7 @@
 namespace NikulinIlya\press\Tests\Feature;
 
 
+use Carbon\Carbon;
 use NikulinIlya\press\PressFileParser;
 use Orchestra\Testbench\TestCase;
 
@@ -52,5 +53,16 @@ class PressFileParserTest extends TestCase
         $data = $pressFileParser->getData();
 
         $this->assertEquals("# Heading\n\nBlog post body here", $data['body']);
+    }
+
+    /** @test */
+    public function a_date_field_gets_parsed()
+    {
+        $pressFileParser = (new PressFileParser("---\ndate: May 14, 1988\n---\n"));
+
+        $data = $pressFileParser->getData();
+
+        $this->assertInstanceOf(Carbon::class, $data['date']);
+        $this->assertEquals('05/14/1988', $data['date']->format('m/d/Y'));
     }
 }
