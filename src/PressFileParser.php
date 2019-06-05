@@ -54,6 +54,8 @@ class PressFileParser
         {
             if ($field === 'date') {
                 $this->data[$field] = Carbon::parse($value);
+            } else if ($field === 'body') {
+                $this->data[$field] = MarkdownParser::parse($value);
             }
         }
     }
